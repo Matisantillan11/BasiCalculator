@@ -84,7 +84,28 @@ public class MainActivity extends AppCompatActivity {
         result.setText(result1);
     }
 
-   
+    //function for division of numbers
+
+    public void divisionNumbers (View Division){
+
+        String value1 = numer1.getText().toString();
+        String value2 = numer2.getText().toString();
+
+        int num1 = Integer.parseInt(value1);
+        int num2 = Integer.parseInt(value2);
+
+        if (num2 > 0){
+
+            int div = num1 / num2;
+
+            String result1 = String.valueOf(div);
+            result.setText(result1);
+
+        }
+        else {
+            result.setText("Error");
+        }
+    }
 }
 
 
