@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     //function for add numers
 
-    public void addNumers  (View addNumers){
+    public void addNumbers  (View addNumbers){
 
         String value1 = numer1.getText().toString();
         String value2 = numer2.getText().toString();
@@ -38,5 +38,55 @@ public class MainActivity extends AppCompatActivity {
 
         String result1 = String.valueOf(add);
         result.setText(result1);
+
     }
+
+    //function for subtract numbers
+
+    public void subtractNumbers (View subtract) {
+
+        String value1 = numer1.getText().toString();
+        String value2 = numer2.getText().toString();
+
+        int num1 = Integer.parseInt(value1);
+        int num2 = Integer.parseInt(value2);
+        int subtr;
+
+
+        if (num1 > num2) {
+
+            subtr = num1 - num2;
+            String result1 = String.valueOf(subtr);
+            result.setText(result1);
+
+        }
+        else {
+
+            subtr = num2 - num1;
+            String result1 = String.valueOf(subtr);
+            result.setText("-" + result1);
+
+        }
+
+    }
+    // function for multiply numbers
+
+    public void multiplyNumbers (View Multiply){
+
+        String value1 = numer1.getText().toString();
+        String value2 = numer2.getText().toString();
+
+        int num1 = Integer.parseInt(value1);
+        int num2 = Integer.parseInt(value2);
+        int multip = num1 * num2;
+
+        String result1 = String.valueOf(multip);
+        result.setText(result1);
+    }
+
+   
 }
+
+
+
+
